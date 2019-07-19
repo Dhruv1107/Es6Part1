@@ -1,4 +1,4 @@
-import News from './news.js';
+import News from './view.js';
 
 export default class Controller {
 	constructor(data) {
@@ -59,6 +59,19 @@ export default class Controller {
 	closepopup = () => {
 		let modal = document.getElementById('myModal');
 		modal.style.display = 'none';
+	}
+
+	showLoader = () => {
+		let loader = document.createElement('div');
+		loader.setAttribute('id', 'loader');
+		loader.setAttribute('class', 'loader');
+		let main = document.getElementById('main');
+		main.appendChild(loader);
+	}
+
+	closeLoader = () => {
+		let loader = document.getElementById('loader');
+		loader.style.display = 'none';
 	}
 }
 window.onclick = function (event) {

@@ -13,7 +13,6 @@ export default class News {
 		this.controllerObj = new Controller(data);
 		this.displayPage();
 		this.fullData = ``;
-		this.email = [];
 	}
 	displayPage = () => {
 		this.header();
@@ -54,7 +53,6 @@ export default class News {
 		document.getElementById('iamform').innerHTML = `<div class='form'>
 		<label for='sel-category' class='form__select-label'><b>SELECT CATEGORY</b></label>
 		<select id='sel-category' class='form__select-box'>
-		<option value=' ' selected></option>
 		${allChannels} 
 		</select>
 		</div>`;
